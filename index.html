@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Bakery</title>
+  </head>
+  <body>
+    <header id="top">
+      <!-- accessible skip links -->
+      <div class="skip-links">
+        <ul>
+          <li>
+            <a href="#main" aria-label="Skip to Main Content"
+              >Skip to Main Content</a
+            >
+            <a href="#footer" aria-label="Skip to Footer">Skip to Footer</a>
+          </li>
+        </ul>
+      </div>
+      <!-- wrapper for limiting page size -->
+      <div class="wrapper">
+        <!-- my logo -->
+        <div class="logo">
+          <img src="images/logo.png" alt="My Logo" />
+        </div>
+        <nav>
+          <!-- nav links -->
+          <ul class="nav-links">
+            <li>
+              <a aria-label="Go to about page" href="index.html">About Us</a>
+            </li>
+            <li>
+              <a aria-label="Go to products page" href="products.html"
+                >Products</a
+              >
+            </li>
+            <li><a aria-label="Go to customize page" href="">Customize</a></li>
+            <li>
+              <a aria-label="Go to contact page" href="contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- store icons like shop and profile -->
+        <div class="store-links">
+          <span class="material-symbols-outlined"> storefront </span>
+          <span class="material-symbols-outlined"> person </span>
+          <span class="material-symbols-outlined"> search </span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="main" class="about wrapper">
+        <div class="content">
+          <h1>About Us</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quas
+            nemo sapiente, hic accusantium ducimus ab sed! Quis, dignissimos
+            nostrum! Ducimus veniam dicta nisi praesentium eveniet, quia ex
+            distinctio quasi eius vitae hic necessitatibus, delectus obcaecati
+            fugit dolorem iste nam. Nobis minus iure sapiente voluptate minima
+            placeat beatae ullam delectus.
+          </p>
+        </div>
+        <!-- about us large image -->
+        <div class="image">
+          <picture>
+            <source
+              srcset="images/about-us-320.png"
+              media="(max-width:420px)"
+            />
+            <source
+              srcset="images/about-us-720.png"
+              media="(min-width:768px)"
+            />
+            <img src="images/about-us-720.png" alt="About Us image" />
+          </picture>
+        </div>
+      </section>
+      <!-- products grid -->
+      <section class="products">
+        <!-- wrapper to limit the width -->
+        <div class="wrapper">
+          <!-- product -->
+          <article>
+            <picture>
+              <source
+                srcset="images/product-1-320.png"
+                media="(max-width:420px)"
+              />
+              <source
+                srcset="images/product-1-720.png"
+                media="(min-width:768px)"
+              />
+              <img src="images/product-1-720.png" alt="My Product" />
+            </picture>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consequatur assumenda repellat eum.
+            </p>
+          </article>
+          <!-- product -->
+          <article>
+            <picture>
+              <source
+                srcset="images/product-2-320.png"
+                media="(max-width:420px)"
+              />
+              <source
+                srcset="images/product-2-720.png"
+                media="(min-width:768px)"
+              />
+              <img src="images/product-2-720.png" alt="My Product" />
+            </picture>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consequatur assumenda repellat eum.
+            </p>
+          </article>
+          <!-- product -->
+          <article>
+            <picture>
+              <source
+                srcset="images/product-3-320.png"
+                media="(max-width:420px)"
+              />
+              <source
+                srcset="images/product-3-720.png"
+                media="(min-width:768px)"
+              />
+              <img src="images/product-3-720.png" alt="My Product" />
+            </picture>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consequatur assumenda repellat eum.
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- purchase section -->
+      <section class="buy gradient">
+        <h2>Buy & Customize</h2>
+        <!-- image grid -->
+        <div class="images wrapper">
+          <picture>
+            <source srcset="images/buy-1-320.png" media="(max-width:420px)" />
+            <source srcset="images/buy-1-720.png" media="(min-width:768px)" />
+            <img src="images/buy-1-720.png" alt="Product" />
+          </picture>
+          <picture>
+            <source srcset="images/buy-2-320.png" media="(max-width:420px)" />
+            <source srcset="images/buy-2-720.png" media="(min-width:768px)" />
+            <img src="images/buy-2-720.png" alt="Product" />
+          </picture>
+          <picture>
+            <source srcset="images/buy-3-320.png" media="(max-width:420px)" />
+            <source srcset="images/buy-3-720.png" media="(min-width:768px)" />
+            <img src="images/buy-3-720.png" alt="Product" />
+          </picture>
+          <picture>
+            <source srcset="images/buy-4-320.png" media="(max-width:420px)" />
+            <source srcset="images/buy-4-720.png" media="(min-width:768px)" />
+            <img src="images/buy-4-720.png" alt="Product" />
+          </picture>
+          <picture>
+            <source srcset="images/buy-5-320.png" media="(max-width:420px)" />
+            <source srcset="images/buy-5-720.png" media="(min-width:768px)" />
+            <img src="images/buy-5-720.png" alt="Product" />
+          </picture>
+        </div>
+        <div class="content">
+          <h3>Dreamglaze</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident
+            alias illo dolor ab voluptas qui enim, praesentium, commodi ea
+            sapiente quo, libero consequuntur animi earum fuga eveniet fugit
+            nemo consectetur!
+          </p>
+          <button>Order</button>
+        </div>
+      </section>
+      <section class="contact">
+        <!-- contact section -->
+        <div class="wrapper">
+          <div class="form">
+            <h2>Contact Us</h2>
+            <!-- contact form -->
+            <form action="">
+              <div>
+                <input type="text" placeholder="First Name" />
+              </div>
+              <div>
+                <input type="text" placeholder="Last Name" />
+              </div>
+              <div>
+                <input type="email" placeholder="Email" />
+              </div>
+              <div>
+                <textarea type="text" placeholder="Message"></textarea>
+              </div>
+              <button type="submit">Order</button>
+            </form>
+          </div>
+          <!-- iframe with address -->
+          <div class="location">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11216.580446922877!2d-75.77329870256555!3d45.34588292430597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1699634356295!5m2!1sen!2sca"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer id="footer">
+      <div class="wrapper">
+        <img class="logo" src="images/logo.png" alt="Company Logo" />
+        <div class="social-media-links">
+          <img src="images/twitter.png" alt="twitter logo" />
+          <img src="images/instagram.png" alt="instagram logo" />
+          <img src="images/linkedin.png" alt="linkedin logo" />
+        </div>
+        <small>&copy; El Maddahi Reda</small>
+        <!-- back to top link -->
+        <a href="#top">Scroll to top</a>
+      </div>
+    </footer>
+  </body>
+</html>
