@@ -1,0 +1,515 @@
+/* setting box sizing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* adding a background image to the body */
+  background: url("../images/body.png") no-repeat;
+  background-size: cover;
+  font-family: Calibri, sans-serif;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* class to add background color to div */
+.background {
+  background-color: #a6a0cd;
+}
+
+/* styling my skip links list */
+.skip-links ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* styling the skip link */
+.skip-links li a {
+  position: absolute;
+  top: -1000px;
+  color: #fff;
+  left: 0;
+  background-color: #000;
+  padding: 1rem;
+  text-decoration: none;
+  z-index: 100;
+}
+
+/* setting skip link to show on focus */
+.skip-links li a:focus {
+  top: 0;
+}
+
+.wrapper {
+  /* limit content width to 1400px */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* setting images to width 100 */
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+header {
+  position: relative;
+  animation: fade 1s ease-in-out;
+}
+
+/* layout for the header content */
+header .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* logo */
+.logo {
+  position: relative;
+  width: 70px;
+  aspect-ratio: 1/1;
+  z-index: 1;
+}
+
+/* adding flex to navigation links */
+.nav-links {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  z-index: 1;
+}
+
+/* adding a gradient to my header */
+header::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #a09aca, transparent);
+  width: 100%;
+  height: 100px;
+}
+
+/* styling my nav links */
+.nav-links a {
+  display: inline-block;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* nav links hover effect */
+.nav-links a:hover {
+  color: white;
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+.store-links {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  z-index: 1;
+}
+
+/* using flexbox on about container */
+.about {
+  padding: 5rem 2rem;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 50px;
+}
+
+/* using flexbox on about content */
+
+.about .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about .content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  animation: fade .75s ease-in-out, slide 1s ease-in-out;
+}
+
+.about .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  animation: fade .75s ease-in-out, slide 1s ease-in-out;
+}
+
+.about .image {
+  flex: 1;
+  animation: fade .75s ease-in-out;
+}
+
+/* adding background color to products section */
+.products {
+  position: relative;
+  background-color: #aaa4d0;
+  animation: fade 1s ease-in-out;
+}
+
+.products .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 8rem 3rem;
+  padding-top: 4rem;
+  gap: 4rem;
+}
+
+/* laying out the products with a display grid */
+.products .wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 8rem 3rem;
+  padding-top: 4rem;
+  gap: 4rem;
+}
+
+.products::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  /* adding gradient to product section with after pseudo element */
+  background: linear-gradient(to bottom, #aaa4d0, white);
+  width: 100%;
+  height: 100px;
+}
+
+.products article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.products article button {
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: white;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.products img {
+  border-radius: 50%;
+  height: 25vw;
+  max-height: 250px;
+  width: 25vw;
+  max-width: 250px;
+}
+
+/* buy section - start */
+.buy {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  /* padding: 2rem; */
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+}
+
+.buy h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.buy .images {
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy .images img {
+  width: 14vw;
+  height: 14vw;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.buy .images img:hover {
+  transform: scaleX(1.05) scaleY(1.05);
+}
+
+.buy .images picture:nth-child(3) img {
+  width: 28vw;
+  height: 28vw;
+}
+
+.buy .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 500px;
+  text-align: center;
+}
+
+.buy .content h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.buy .content button {
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: #a6a0cd;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* buy sectio - end */
+
+/* contact section -start */
+
+.contact {
+  position: relative;
+  background-color: #a6a0cd;
+}
+
+.contact .wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 6rem 2rem;
+}
+
+.contact::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #a6a0cd, white);
+  width: 100%;
+  height: 100px;
+}
+
+.contact .form {
+  flex: 1;
+  padding: 2rem;
+}
+
+.contact .location {
+  flex: 1;
+  padding: 2rem;
+}
+
+.contact iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.contact .form h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact .form button {
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  background-color: #ffffff;
+  color: #8f88c1;
+  border: 1px solid #8f88c1;
+  outline: none;
+  align-self: flex-start;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact form > div input,
+.contact form > div textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid black;
+}
+
+textarea {
+  height: 150px;
+}
+
+/* contact section - end */
+
+/* footer - start */
+
+footer {
+  background-color: white;
+  padding: 4rem 2rem;
+  padding-bottom: 1rem;
+}
+
+footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+footer .logo {
+  width: 150px;
+  display: block;
+}
+
+footer .social-media-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+footer .social-media-links img {
+  width: 35px;
+}
+
+/* footer - end */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* media queries for tablet */
+
+@media screen and (max-width: 768px) {
+  header .wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .products .wrapper-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .products .wrapper {
+    padding-top: 4rem;
+  }
+
+  .products img {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .about .content {
+    padding: 0rem;
+  }
+
+  .buy .images {
+    padding: 1rem;
+  }
+
+  .contact .wrapper {
+    flex-direction: column;
+  }
+
+  .contact iframe {
+    height: 300px;
+  }
+}
+
+/* media qeries for mobile */
+
+@media screen and (max-width: 420px) {
+  .about .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .products .wrapper-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .products .wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .products img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .buy .images {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .buy .images img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact .wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .contact .form {
+    padding: 0rem;
+  }
+
+  .contact .location {
+    padding: 0rem;
+  }
+}
